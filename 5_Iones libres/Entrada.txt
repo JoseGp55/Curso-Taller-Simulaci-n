@@ -1,0 +1,8 @@
+Numero de pasos: 10000000
+
+Actualizacion: 50
+Iones negativos: 20
+
+Iones positivos: 20
+
+(dx,dy,dz)= 5.0, 5.0, 5.0
