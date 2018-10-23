@@ -1,5 +1,5 @@
 //Calculo del area de un circulo de radio unitario
-//JosÃ© Guadalupe Ibarra Armenta
+//José Guadalupe Ibarra Armenta
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -44,6 +44,7 @@ double alea(void){//genera numeros aleatorios entre 0 y 1
 return((double)rand()/RAND_MAX); //32767 dependiente de la libreria
 }
 /////////////////////////////////////////////////////////////////////////////THE END///////////////////////////////////////////////////////////////////////
+
 
 
 
