@@ -1,5 +1,5 @@
 //Sistema de iones con movimiento aleatorio e ilimitado (particulas libres)
-//José Guadalupe Ibarra Armenta
+//JosÃ© Guadalupe Ibarra Armenta
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -9,8 +9,6 @@
 
 double alea(void);
 
-void lee_entrada(void);
-void imprime_entrada(void);
 void calculos_iniciales(void);
 int posiciones_iniciales(void);
 void selecciona_ion(void);
@@ -23,19 +21,18 @@ int carga;
 }ion[MAXPART];
 
 /****Info del sistema****/
-int pasos;//Numero de pasos
-int actu;//Actiualizacion
-float dx,dy,dz;
+int pasos=10000000;//Numero de pasos
+int actu=50;//Actiualizacion
+float dx=0.5,dy=0.5,dz=0.5;
+int np=20, nn=20
 
 int p;
-int ni, n, np, nn;
+int ni, n;
 
 /***INICIO***/
 main(){
 srand((unsigned) time(NULL));
 system ("mkdir temp");        
-lee_entrada();
-imprime_entrada();
 calculos_iniciales();
 posiciones_iniciales();
 	for(p=1;p<=pasos;p++){//Ciclo principal
@@ -48,28 +45,6 @@ return 0;
 }
 //******FIN****///
 //FINAL DEL PROGRAMA PRINCIPAL*****************************************************************************************************************************
-void lee_entrada(void){
-FILE *dat;
-	dat=fopen("Entrada.txt","r");
-	if(dat){
-        fscanf(dat,"Numero de pasos: %i\n",&pasos);
-		fscanf(dat,"Actualizacion: %i\n",&actu);
- 		fscanf(dat,"Iones negativos: %i\n",&nn);
-		fscanf(dat,"Iones positivos: %i\n",&np);
-		fscanf(dat,"(dx,dy,dz)= %f, %f, %f\n",&dx,&dy,&dz);
-	}
-	fclose(dat);
-}
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-void imprime_entrada(void){
- 	printf("Datos del sistema\n");	
-    printf("Numero de pasos: %i\n",pasos);
-	printf("Actualizacion: %i\n",actu);
- 	printf("Iones negativos: %i\n",nn);
-	printf("Iones positivos: %i\n",np);
-	printf("(dx,dy,dz)= %f, %f, %f\n\n",dx,dy,dz);
-}
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 double alea(void){//genera numeros aleatorios entre 0 y 1
 return((double)rand()/RAND_MAX); //32767 dependiente de la libreria
 }
