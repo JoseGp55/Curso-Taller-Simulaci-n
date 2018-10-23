@@ -24,7 +24,7 @@ int carga;
 int pasos=10000000;//Numero de pasos
 int actu=50;//Actiualizacion
 float dx=0.5,dy=0.5,dz=0.5;
-int np=20, nn=20
+int np=20, nn=20;
 
 int p;
 int ni, n;
