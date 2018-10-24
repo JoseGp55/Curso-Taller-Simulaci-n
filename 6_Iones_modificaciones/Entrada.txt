@@ -1,0 +1,16 @@
+Numero de pasos: 10000000
+
+Actualizacion: 100000
+
+Valencias (1,2): 2, -1
+Iones (1,2): 100, 200
+
+(w,l): 20, 20
+
+Temperatura: 300
+
+Permitividad dielectrica relativa: 78.5
+
+Numero de clases: 200
+
+(dx,dy,dz)= 2.0, 2.0, 2.0
